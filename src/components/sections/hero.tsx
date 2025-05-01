@@ -30,13 +30,13 @@ const HeroSection = () => {
               <span className="inline-block animate-waving-hand">👋</span>
             </Typography>
             <Typography>
-              I'm a full stack developer specializing in React.js and Node.js, with 4 years of experience creating fast, accessible, and visually engaging digital experiences. I bring strong expertise in JavaScript, TypeScript, React JS, Next JS, and React Native—developing responsive interfaces and implementing scalable business logic. With foundational backend knowledge in Node.js, Express.js, and MongoDB, I understand the full web application lifecycle. I take pride in writing clean, maintainable code and thrive in cross-functional teams. Passionate about solving real-world problems through code, I’m always eager to learn and push the boundaries of what’s possible on the web.
+              I'm a frontend developer specializing in React.js and React Native, with 4 years of experience creating fast, accessible, and visually engaging digital experiences. I bring strong expertise in JavaScript, TypeScript, React JS, Next JS, and React Native—developing responsive interfaces and implementing scalable business logic. With foundational backend knowledge in Node.js, Express.js, and MongoDB, I understand the full web application lifecycle. I take pride in writing clean, maintainable code and thrive in cross-functional teams. Passionate about solving real-world problems through code, I’m always eager to learn and push the boundaries of what’s possible on the web.
             </Typography>
           </div>
           <div className="flex flex-col gap-2">
             <div className="flex gap-2">
               <MapPin className="stroke-gray-600" />
-              <Typography>Navi Mumbai, Maharshtra, India</Typography>
+              <Typography>Navi Mumbai, Maharashtra, India</Typography>
             </div>
 
             <div className="flex items-center gap-2">
