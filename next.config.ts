@@ -1,7 +1,9 @@
 import type { NextConfig } from "next";
+const nextBuildId = require("next-build-id")
+
 
 const nextConfig: NextConfig = {
-  /* config options here */
+  generateBuildId: async () => nextBuildId({ dir: __dirname }),
 };
 
 export default nextConfig;
