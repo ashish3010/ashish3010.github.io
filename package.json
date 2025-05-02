@@ -6,19 +6,22 @@
     "dev": "next dev --turbopack",
     "start": "next start",
     "prepare": "husky install",
-    "lint": "eslint . --ext .js,.ts,.jsx,.tsx",
-    "lint:fix": "eslint . --ext .js,.ts,.jsx,.tsx --fix",
+    "lint": "./node_modules/.bin/eslint --ext .js,.jsx,.ts,.tsx src/app --fix",
+    "lint:fix": "npm run lint -- --fix",
     "build": "next build",
     "predeploy": "npm run build",
     "deploy": "next export && gh-pages -d out"
   },
   "lint-staged": {
-    "*.{js,ts,tsx,jsx}": [
-      "npm run lint:fix"
+    "src/**/*.{js,jsx,tsx,ts}": [
+      "npm run lint:fix",
+      "git add"
     ]
   },
   "dependencies": {
     "@radix-ui/react-dialog": "^1.1.11",
+    "@typescript-eslint/eslint-plugin": "^8.31.1",
+    "@typescript-eslint/parser": "^8.31.1",
     "@vercel/analytics": "^1.5.0",
     "autoprefixer": "^10.4.21",
     "class-variance-authority": "^0.7.1",
@@ -37,7 +40,7 @@
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
-    "eslint": "^9",
+    "eslint": "^9.25.1",
     "eslint-config-next": "15.3.1",
     "gh-pages": "^6.3.0",
     "husky": "^9.1.7",
