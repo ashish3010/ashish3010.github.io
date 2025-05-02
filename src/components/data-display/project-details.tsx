@@ -7,9 +7,10 @@ import Typography from '@/components/general/typography';
 import Link from '@/components/navigation/link';
 import Tag from '@/components/data-display/tag';
 import Card from '@/components/layout/card';
+import { track } from '@/lib/ga-tags';
 
-const ImageClickView = ({ children, url }: { children: React.ReactNode, url?: string }) => (
-  url ? <Link noCustomization href={url} externalLink>{children}</Link> : children
+const ImageClickView = ({ children, url, name }: { children: React.ReactNode, url?: string, name: string }) => (
+  url ? <Link noCustomization href={url} externalLink onClick={() => track("Project_Clicked", { action: `${name}-image` })}>{children}</Link> : children
 )
 
 type ProjectDetailsProps = ProjectDetailsType & {
@@ -35,7 +36,7 @@ const ProjectDetails = ({
             : 'md:order-last md:rounded-r-xl md:border-l'
         )}
       >
-        <ImageClickView url={url}>
+        <ImageClickView url={url} name={name}>
           <Image
             src={previewImage}
             alt={`${name} preview`}
@@ -66,6 +67,7 @@ const ProjectDetails = ({
           noCustomization
           className="self-start rounded-lg p-1.5 hover:bg-gray-50 [&_svg]:stroke-gray-500"
           externalLink
+          onClick={() => track("Project_Clicked", { action: `${name}-arrow` })}
         >
           <ExternalLink />
         </Link>}

@@ -169,7 +169,7 @@ export const EXPERIENCES: ExperienceDetails[] = [
     currentlyWorkHere: true,
     summary: [
       'Contributed to end-to-end development of JioOnePay and its admin portal, supporting one-time and Autopay transactions across MyJio and partner platforms like JioMart, Netmeds, JioSaavn, etc',
-      'Built and maintained high-performance cross-platform mobile apps using React Native, ensuring scalability, responsiveness, and seamless user experience.',
+      'Built and maintained many pages for MyJio app using React Native, ensuring scalability, responsiveness, and seamless user experience.',
       'Collaborated with UX/UI, backend, and product teams to deliver intuitive designs, optimize key MyJio app flows (bill payments, recharge, payment states), and uphold deployment quality through rigorous code reviews.',
       'Developed tailored interfaces for JioFiber set-top box users, simplifying postpaid and recharge workflows for TV-based platforms.'
     ],

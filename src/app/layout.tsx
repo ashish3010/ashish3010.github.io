@@ -2,13 +2,8 @@ import { Metadata } from 'next';
 import './globals.css';
 import Header from '@/components/layout/header';
 import Footer from '@/components/layout/footer';
-
-// import localFont from 'next/font/local'
-
-// const inter = localFont({
-//   src: 'fonts/Montserrat-Regular.ttf', // adjust path if needed
-//   display: 'swap',
-// })
+import { Analytics } from '@vercel/analytics/next';
+import GoogleAnalytics from './google-analytics';
 
 const title = 'Ashish Mishra | Frontend Developer From Mumbai, India.';
 const description = 'Frontend developer specializing in modern, responsive web interfaces with sleek animations and a focus on user experience.';
@@ -73,7 +68,11 @@ export default function RootLayout({
       </head>
       <body className={`bg-gray text-gray-600 antialiased`}>
         <Header />
-        <main className="flex min-h-screen w-full flex-col">{children}</main>
+        <main className="flex min-h-screen w-full flex-col">
+          {children}
+          <GoogleAnalytics />
+          <Analytics />
+        </main>
         <Footer />
       </body>
     </html>

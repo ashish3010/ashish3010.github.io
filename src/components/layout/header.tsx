@@ -17,6 +17,7 @@ import Link from '@/components/navigation/link';
 import IconButton from '@/components/general/icon-button';
 import DownloadCV from '@/components/general/download-cv';
 import Typography from '@/components/general/typography';
+import { track } from '@/lib/ga-tags';
 
 const Logo = () => (
   <Typography variant="h3" className="font-bold">
@@ -29,12 +30,17 @@ const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
   const size = useWindowSize();
 
-  // close sidebar if open in screen size < 768px
   useEffect(() => {
     if (size?.width && size?.width > 767 && isOpen) {
       setIsOpen(false);
     }
   }, [size, isOpen]);
+
+  const onLinkClick = (href: string) => {
+    track("link_clicked", {
+      action: href
+    })
+  }
 
   return (
     <header
@@ -53,7 +59,7 @@ const Header = () => {
           <ul className="flex list-none items-center gap-6">
             {NAV_LINKS.map((link, index) => (
               <li key={index}>
-                <Link href={link.href}>{link.label}</Link>
+                <Link href={link.href} onClick={() => onLinkClick(link.href)}>{link.label}</Link>
               </li>
             ))}
           </ul>
@@ -84,7 +90,9 @@ const Header = () => {
                   <li key={index}>
                     <Link
                       href={link.href}
+                      className='text-gray-950'
                       onClick={() => {
+                        onLinkClick(link.href);
                         const timeoutId = setTimeout(() => {
                           setIsOpen(false);
                           clearTimeout(timeoutId);
