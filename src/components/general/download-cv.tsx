@@ -6,7 +6,7 @@ import { track } from '@/lib/ga-tags';
 const DownloadCV = () => {
 
   const onDownloadCV = () => {
-    window?.open('files/ashish_mishra_cv.pdf', '_blank');
+    window?.open('files/Ashish_Mishra_Resume.pdf', '_blank');
     track('Downloaded_CV')
   }
 
