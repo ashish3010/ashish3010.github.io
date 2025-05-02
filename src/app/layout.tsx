@@ -5,7 +5,7 @@ import Footer from '@/components/layout/footer';
 import { Analytics } from '@vercel/analytics/next';
 import GoogleAnalytics from './google-analytics';
 
-const title = 'Ashish Mishra | Frontend Developer';
+const title = 'Ashish Mishra | Frontend Developer | React | React Native';
 const description = 'Frontend developer specializing in modern, responsive web interfaces with sleek animations and a focus on user experience.';
 const url = 'https://ashishmishra.vercel.app/';
 
