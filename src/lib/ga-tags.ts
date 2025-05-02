@@ -1,6 +1,6 @@
 export const GA_MEASUREMENT_ID = 'G-XKSH07EPFZ'
 type EventPayload = {
-  [key: string]: any;
+  [key: string]: unknown;
 };
 
 type EventItem = {
@@ -12,7 +12,7 @@ export { };
 
 declare global {
   interface Window {
-    dataLayer: any[];
+    dataLayer: unknown[];
   }
 }
 
