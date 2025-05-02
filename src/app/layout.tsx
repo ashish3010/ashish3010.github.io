@@ -7,7 +7,7 @@ import GoogleAnalytics from './google-analytics';
 
 const title = 'Ashish Mishra | Frontend Developer From Mumbai, India.';
 const description = 'Frontend developer specializing in modern, responsive web interfaces with sleek animations and a focus on user experience.';
-const url = 'https://ashish3010.github.io/';
+const url = 'https://ashishmishra.vercel.app/';
 
 export const metadata: Metadata = {
   metadataBase: new URL(url),
